@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroud</title>
+    <style>
+        html,body {
+            margin: 0;
+        }
+        /* background clip */
+        .header {
+            width: 100%;
+            height: 20vh;
+            background-color: brown;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 10px dashed #ccc;
+            background-clip: padding-box;/*content-box, */
+        }
+        /* background image */
+        .header1 {
+            width: 100%;
+            height: 30vh;
+            background-image:
+            url(https://pngimg.com/uploads/star/star_PNG76856.png),/*hinh nao dung truoc thi nhan hinh do*/
+             url(https://th.bing.com/th/id/OIP.rtUIXX1_w_AcW-g6Lto8oQHaEK?pid=ImgDet&rs=1);
+            /*background-size: 100% auto; tu dong chinh chieu cao va chieu rong*/
+            background-repeat: no-repeat;/*thuoc tinh nay k lam lap lai backgroud bao gom (repeat-x, repeat-y)*/
+        }
+        /* background linear-gradient  */
+        .header2 {
+            width: 100%;
+            height: 60vh;
+            background-image: linear-gradient(0, rgba(255, 255, 0.5), rgba(0, 0, 255, 0.5)),/*backgroud + image*/
+            url(https://th.bing.com/th/id/OIP.kByTzNS0CxnFPOzoNyHs_QHaJ4?pid=ImgDet&rs=1);
+            background-repeat: no-repeat;
+            background-size: 20%;
+        }
+        /* background-size keywords */
+        .header3 {
+            width: 100%;
+            height: 30vh;
+            background-image: url(https://thumbs.dreamstime.com/b/orange-black-dog-paw-prints-tile-pattern-repeat-background-seamless-repeats-56349888.jpg);
+            background-size: contain;/*contain -> con khoang trang, cover-> thi full mang hinh*/
+        }
+        /* backgroud-position */
+        .box {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.18169-9/19420650_234462087068070_7700512222224994517_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=vs_j9iFDkuUAX_iIpz7&_nc_ht=scontent.fsgn5-5.fna&oh=c4f3b06837ff98fb4beb4b52923228ef&oe=6153B8A8);
+            background-repeat: no-repeat;
+            background-size: 200px;
+            background-position: center;/*can chinh vi tri hinh anh and backgroud*/
+        }
+    </style>
+</head>
+<body>
+    <h1>backgroud-clip</h1>
+    <div class="header"></div>
+
+    <h1>backgroud-image</h1>
+    <div class="header1"></div>
+
+    <h1>backgroud-image: linear-gradient</h1>
+    <div class="header2"></div>
+
+    <h1>backgroud repeat</h1>
+    <div class="header3"></div>
+
+    <h1>backgroud-position</h1>
+    <div class="box"></div>
+</body>
+</html>

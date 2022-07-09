@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAScript6</title>
+</head>
+<body>
+    <h1>Destrucring, Rest</h1>
+
+    <script>
+        var array =['Java', 'js', '.net'];
+        //Destrucring
+      //  var [a,b,c] = array;
+        //get a và c
+        var [a, , c] = array;
+        console.log(a, c);
+
+        var ar = ['php', 'css', 'ruby'];
+        //REST
+        var [a, ...rest] = ar;
+        console.log(a);
+      //  console.log(rest);
+
+        //đối với Oject
+        var Course = {
+            name: 'JS',
+            price: 1000,
+            image: 'tuấn',
+        };
+          //Destrucring
+        //var{name, price} = course;
+
+        //Rest
+        var {name, ...rest} = Course;
+        console.log(name);
+        console.log(rest);
+
+    </script>
+</body>
+</html>

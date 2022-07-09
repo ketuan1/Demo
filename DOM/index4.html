@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT TRONG DOM</title>
+</head>
+<body>
+    <h1 class="heading">Heading</h1>
+
+
+
+    <script>
+        var headingE = document.querySelector('.heading');
+
+        //lấy text trong element
+        // console.log(headingE.innerText);
+        // console.log(headingE.textContent)
+
+
+        //sữa nội dung text
+        headingE.innerText = 'new abc';
+        //case other
+        headingE.textContent = "abc";
+    </script>
+</body>
+</html>

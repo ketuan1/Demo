@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener</title>
+</head>
+<body>
+    <h1>Event listener</h1>
+    <button id="btn">Click me</button>
+
+    <button id="btn2">OKE</button>
+
+    <script>
+        var Ebtn = document.getElementById('btn');
+
+        //addEventListener => you can add addEventListener nhiều lần
+        // và dc sắp sếp theo thứ tự
+        //Event nào dc add trước thì xuất hiện trước
+        // Ebtn.addEventListener('click', function(e){
+        //     console.log('click 1');
+        // });
+        // Ebtn.addEventListener('click', function(e){
+        //     console.log('click 2');
+        // });
+        function click1() {
+            console.log('click 1');
+        }
+        Ebtn.addEventListener('click', click1);
+
+        //hủy bỏ enventlistener
+        setTimeout(function() {
+            Ebtn.removeEventListener('click', click1);
+        },3000);
+    </script>
+</body>
+</html>

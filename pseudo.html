@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class</title>
+</head>
+<style>
+    .box {
+        width: 100%;
+        height: 20vh;
+        background: rgb(136, 17, 17);
+    }
+    /*hover thi re chuot vao hien ra hieu ung*/
+    h1:hover {
+        background-color: rosybrown;
+    }
+    /*active thi click chuot vao hien ra hieu ung*/
+    li:active {
+        background-color: salmon;
+    }
+    .box1 {
+        width: 100%;
+        height: 20vh;
+        background: seagreen;
+    }
+    .box1::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: seashell;
+    }
+    .box1::after {
+        content: "xin chao";
+        color: sienna;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: seashell;
+    }
+    /*lam chu cai dau to ra*/
+    h2::first-letter {
+        font-size: 50px;
+        color: sienna;
+    }
+    /*khi boi chuot vao hien mau ra*/
+    h3::selection {
+        background: skyblue;
+        color: rgb(230, 235, 238);
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <h1>thanh tuan</h1>
+    <ul>
+        <li>hover</li>
+        <li>active</li>
+       
+    </ul>
+    <h2>css pseudo-element</h2>
+    <h3>thanh tuan</h3>
+    <div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EVENT</title>
+</head>
+<body>
+    <h1>DOM EVENT</h1>
+    <h2>new test</h2>
+
+
+    <h3>test DOM EVENT</h3>
+    <h3>test DOM EVENT</h3>
+    <h3>test DOM EVENT</h3>
+    <!-- Attribute event -->
+    <!-- <h2 onclick="console.log(this.innerText)">Event DOM</h2> -->
+
+    <script>
+        //gán event
+        var he2 = document.querySelector('h2');
+        he2.onclick = function() {
+            console.log(this.innerText);
+        }
+    </script>
+
+
+    <script>
+        //lấy ra nhiều đối tượng 1 lần (nhiều đối tượng trùng nhau) => querySelectorAll
+        var he3 = document.querySelectorAll('h3');
+        for(var i = 0; i < he3.length; ++i) {
+            he3[i].onclick = function(e) {
+                console.log(e.target);
+            }
+        }
+
+    </script>
+</body>
+</html>

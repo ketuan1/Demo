@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>Promise method(resolve, reject, all)</h1>
+
+    <script>
+        //method
+        // 1: promesi.resolve
+        // 2: promise.reject
+        // 3: promise.all
+
+        var promesi = Promise.resolve('success');
+       // var promesi = Promise.reject('err');
+
+        promesi
+        .then(function(result) {
+            console.log('result: ' + result);
+        })
+
+        .catch(function(err) {
+            console.log('err: ' + err);
+        });
+    </script>
+</body>
+</html>

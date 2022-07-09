@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>thuc chien CALLBACK</h1>
+   <p>
+    Gọi lại là một function sẽ được thực thi sau khi một function khác đã được thực thi xong - do đó nó có tên là callback(gọi lại)
+    .
+    gọi 1 ham trong 1 ham
+   </p>
+
+   <!-- session 1 -->
+    <!-- <script>
+        function myFunction(param) {
+
+        }
+
+        function myCallback(value) {
+            console.log('Value: ', value);
+        }
+
+        myCallback(myFunction);
+
+    </script> -->
+
+<!-- session 2 -->
+<!-- for in get so -->
+    <!-- <script>
+        var courses = [
+            'html',
+            'javs',
+            'css'
+        ];
+        courses.length = 10;
+        for(var index in courses) {
+            //console.log(index);
+            //or
+            console.log(courses[index]);
+        }
+    </script> -->
+
+<!-- bao tap -->
+    <!-- <script>
+
+        var cou = [
+            'java',
+            'html',
+            'css'
+        ];
+
+        cou.array.forEach(function(couse, index, array)  {
+            console.log(couse, index, array);
+        });
+    </script> -->
+
+    <!-- bai tap 2 filter -->
+    <!-- filter loc cac phan tu thoa mang nguoi dung -->
+
+    <script>
+        var courses2 = [
+            {
+             name: 'java',
+            coin: 680
+            },
+             {
+             name: 'css',
+            coin: 860
+            },
+             { 
+             name: 'html',
+            coin: 980
+            }
+           
+        ];
+      //method => function(element, index, array)
+        var filterCourses = courses2.filter(function(couser, index, array){
+            return couser.coin > 700;
+        });
+     console.log(filterCourses);
+    </script>
+
+
+    <!-- bai tapj filter2 -->
+    <script>
+
+        Array.prototype.filter2 =  function(callback) {
+        for(var index in this) {
+            if(this.hasOwnProperty(index)) {
+                 callback(this[index], index, this)
+            }
+        }
+        }
+        var courses3 = [
+            {
+             name: 'java',
+            coin: 680
+            },
+             {
+             name: 'css',
+            coin: 860
+            },
+             { 
+             name: 'html',
+            coin: 980
+            }
+           
+        ];
+        var filterCourses = courses3.filter2(function(co1, index, array){
+            console.log(co1, index, array);
+           // return co1.coin > 10;
+        });
+    </script>
+
+<!-- bai tap 4 some=> lay dieu kien -->
+    <script>
+        var khoahoc = [
+            {
+           name: 'java',
+            coin: 680,
+            isFinish: true
+            },
+             {
+             name: 'css',
+            coin: 860,
+            isFinish: false
+            },
+             { 
+             name: 'html',
+            coin: 980,
+            isFinish: false
+            }          
+        ];
+
+        var result = khoahoc.some(function(kh, index, array){
+          return kh.isFinish;
+        });
+        console.log(result);
+    </script>
+
+    <!-- ba tap 5 some 2 -->
+    <script>
+
+        Array.prototype.some2 = function(callback) {
+            for(var index in this) {
+                if(this.has(prototype)) {
+                   if( callback(this[index], index, this)) {
+                       return true;
+                   }
+                }
+            }
+            return false;
+        }
+        var khoahoc1 = [
+            {
+           name: 'java',
+            coin: 680,
+            isFinish: true
+            },
+             {
+             name: 'css',
+            coin: 860,
+            isFinish: false
+            },
+             { 
+             name: 'html',
+            coin: 980,
+            isFinish: false
+            }          
+        ];
+        var result = khoahoc.some2(function(kh1, index, array){
+          return kh1.isFinish;
+        });
+    </script>
+
+
+</body>
+</html>

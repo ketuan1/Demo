@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get element</title>
+</head>
+<body>
+    <h1 id="heading">HTML DOM</h1>
+    <h2 class="header">HTML DOM</h2>
+    <h3>HTML DOM</h3>
+    <h4 class="selc">HTML DOM</h4>
+
+    <script>
+        //getElementByID => select ID
+  var headingNode = document.getElementById('heading');
+  console.log({
+      Element: headingNode
+  });
+    </script>
+
+    <!-- get class => getElementsByClassName lấy class -->
+    <script>
+        var headNode = document.getElementsByClassName('header');
+        console.log({
+            Element: headNode
+        });
+    </script>
+
+<script>
+    //tabName => lấy thẻ ra
+    var he3 = document.getElementsByTagName('h3');
+    console.log(he3)
+</script>
+
+<script>
+    //selector => select class
+    var he4 = document.querySelector('.selc');
+    console.log(he4);
+    
+</script>
+    </body>
+</html>
+

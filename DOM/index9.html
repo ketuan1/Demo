@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập về envent DOM</title>
+</head>
+<body>
+    <h1>Bài tập về event DOM</h1>
+    <input type="text">
+    <input type="checkbox">
+    <select name="" id="">
+        <option value="1">java</option>
+        <option value="2">html</option>
+        <option value="3">css</option>
+        <option value="4">c#</option>
+    </select>
+
+
+    <script>
+        //input
+        var inputE = document.querySelector('input[type="text"]');
+        
+        //lấy value của thẻ input
+        //sử dụng onchange hoặc oninput
+        inputE.onchange = function(e) {
+            console.log(e.target.value);
+        }
+    </script>
+
+<script>
+    //check box
+    var inputC = document.querySelector('input[type="checkbox"]');
+        
+    inputC.onchange = function(e) {
+        console.log(e.target.checked);
+    }
+</script>
+
+<script>
+    //Select
+    var inputS = document.querySelector('select');
+        
+    inputS.onchange = function(e) {
+        console.log(e.target.value);
+    }
+</script>
+</body>
+</html>

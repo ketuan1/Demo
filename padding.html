@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css padding</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 60px;
+            height: 60px;
+            color: white;
+            /*3 thuộc tính này để căn giữa chữ ra backroud*/
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        .box1 {
+            background-color: tomato;
+            /*viết nhanh 4 bên bằng nhau là:
+            padding: 10px;
+            */
+            padding: 10px 20px 10px 10px; /*theo chiều kim đồng hồ: top, right, bottom, left*/
+        }
+        .box2 {
+            background-color: thistle;
+        }
+        .box3 {
+            background-color: violet;
+            padding-top: 10px;
+            padding-right: 10px;/*bên phải dày hơn*/
+            padding-left: 10px;/*bên trái dày hơn*/
+            padding-bottom: 10px;/*bên dưới dày hơn*/
+
+        }
+        .bor1 {
+            background-color: teal;
+        }
+        .bor2 {
+            background-color: brown;
+            padding: 20px;
+            border-top-width: 1px;
+            border-right-width: 3px;
+            border-bottom-width: 1px;
+            border-left-width: 3px;
+            border-style: solid;
+            border-color: rgb(27, 48, 7);
+        }
+        .bor3{
+            background-color: chartreuse;
+            /*cach ngan hon*/
+            border: 10px solid coral;
+        }
+        .mar1 {
+            background-color: cornflowerblue;
+            margin-left: 20px;
+        }
+        .mar2 {
+            background-color: crimson;
+            /*viet nhanh*/
+            margin: 10px 20px 30px 40px;
+        }
+        .mar3 {
+            background-color: darkgoldenrod;
+            margin-top: 20px;
+        }
+        .boxx{
+            width: 100px;
+            height: 100px;
+            color: darkgoldenrod;
+            padding: 16px;
+            border: 2px solid black;
+            box-sizing: border-box;/*lam kich thuoc nam trong width va height dieu nhau*/
+        }
+    </style>
+</head>
+<body>
+    <h1>padding</h1>
+    <div class="box box1">Box1</div>
+    <div class="box box2">Box2</div>
+    <div class="box box3">box3</div>
+
+    <h1>border</h1>
+    <div class="box bor1">border 1</div>
+    <div class="box bor2">border 2</div>
+    <div class="box bor3">border3</div>
+
+    <h1>Margin</h1>
+    <div class="box mar1">margin 1</div>
+    <div class="box mar2">margin  2</div>
+    <div class="box mar3">margin 3</div>
+
+
+    <h1>box-sizing</h1>
+    <div class="boxx">content of box-sizing</div>
+
+</body>
+</html>

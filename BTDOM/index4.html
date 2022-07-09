@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập DOM</title>
+</head>
+<body>
+    <div>
+        <!-- hình chủ đạo -->
+        <img id="hinhanh" src="https://freetuts.net/upload/tut_post/images/2017/03/29/810/quan-ly-ten-mien-trong-direct-admin.gif" alt="Hình ảnh"/>
+    </div>
+     
+    <input type="button" id="btn1" value="Đổi Hình"/>
+    <input type="button" id="btn2" value="Trở về hình cũ"/>
+
+    <script>
+
+var hinh1 = 'https://freetuts.net/upload/tut_post/images/2017/03/29/810/quan-ly-ten-mien-trong-direct-admin.gif';
+var hinh2 = 'https://freetuts.net/upload/tut_post/images/2016/09/27/746/typescript-basic-types.gif';
+
+//đổi hình
+document.getElementById('btn1').onclick = function() {
+    document.getElementById('hinhanh').src = hinh2;
+};
+
+//trở về
+document.getElementById('btn2').onclick = function() {
+    document.getElementById('hinhanh').src = hinh1;
+};
+    </script>
+</body>
+</html>

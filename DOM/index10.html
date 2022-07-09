@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thực hành DOM</title>
+</head>
+<body>
+    <h1>Thực hành DOM</h1>
+    <a href="https://f8.edu.vn">học lập trình</a>
+    <a href="https://google.com.vn">tìm kiếm</a>
+
+    <div>
+        DIV
+        <button>Click me</button>
+    </div>
+
+    <script>
+        //khi có https://f8.edu.vn thì nó mới thực thì còn k thì ngược lại
+        // thuộc tính preventDefault
+        var aE = document.querySelectorAll('a');
+        for(var i = 0; i < aE.length; ++i){
+            aE[i].onclick = function(e) {
+                if(!e.target.href.startsWidth('https://f8.edu.vn'))
+                e.preventDefault();
+            }
+        }
+    </script>
+
+<script>
+    // thuộc tính stopPropagation ngăn chặn việc nỗi bọt
+    document.querySelector('div').onclick = function(e) {
+        console.log('DIV');
+    }
+
+    document.querySelector('button').onclick = function(e) {
+        e.stopPropagation();
+        console.log('Click me');
+    }
+</script>
+
+</body>
+</html>

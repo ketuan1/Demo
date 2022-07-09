@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm element</title>
+</head>
+<body>
+    <h1>Thêm element</h1>
+    <div class="box"></div>
+<div class="box2"></div>
+
+
+    <script>
+        
+        var boxE = document.querySelector('.box');
+        //thêm element vào trong 1 element và attribute và text vào element
+        //attribute
+      //  boxE.innerHTML='<h2 title= "abc">Heading</h2>';
+
+        boxE.innerHTML='<h2>Heading</h2>';
+
+        //lấy textnode trong inertHTML
+        console.log(document.querySelector('h2').innerHTML)
+      
+    </script>
+
+    <script>
+         //outerHTML
+         //ghi đè lại thẻ box
+         var boxE2 = document.querySelector('.box2');
+         boxE2.outerHTML='<h3>new</h3>'
+         console.log(boxE2);
+    </script>
+</body>
+</html>

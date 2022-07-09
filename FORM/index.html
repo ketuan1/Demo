@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form valicator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Thanh vien dang ky</h3>
+            <p class="desc">training developers free at F8</p>
+
+            <div class="spacer">
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Tên đầy đủ</label>
+                    <input type="text" id="fullname" name="fullname" rules="required" placeholder="Ten day du" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" rules="required|email" placeholder="nhap email" class="form-control">
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input type="password" id="password" name="password" rules="required|min:6" placeholder="Nhập mật khẩu" class="form-control">
+                    <span class="form-message"></span>
+                </div>                      
+
+                <button class="form-submit">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./valudator.js"></script>
+
+    <script>
+      var form = new  Validator('#form-1');
+      form.onSubmit = function (formData) {
+          console.log(formData);
+      }
+
+      //form mặc định
+      //new Validator('##form-1');
+    </script>
+
+</body>
+</html>

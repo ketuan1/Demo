@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ôn lại Emlement</title>
+</head>
+<body>
+    <p>ôn lại emlemt</p>
+  
+    <!-- lấy tất cả h1,h2,h3 element lưu vào biến -->
+    <h1>học tại f8</h1>
+    <section>
+        <h2>học js basic</h2>
+    </section>
+    <div>
+        <h3>lmaf bài tập cơ bản</h3>
+    </div>
+
+    
+
+    <!-- bài giải 1-->
+    <script>
+        var bt1 = document.getElementsByTagName('h1')[0];
+        var bt2 = document.getElementsByTagName('h2')[0];
+        var bt3 = document.getElementsByTagName('h3')[0];
+        console.log(bt1);
+        console.log(bt2);
+        console.log(bt3);
+    </script>
+
+<!-- bài 2 -->
+    <!-- lấy id -->
+    <h1 class="heading" id="heading">DOM HTML</h1>
+<!-- bài 2 -->
+    <script>
+ var b2 = document.getElementById('heading');
+ console.log(b2);
+    </script>
+     
+     <!-- bài tập 3 -->
+    <form action="form">form</form>
+
+    <!-- giả bafi3: html conllection -->
+    <script>
+        console.log(document.forms[0]);
+    </script>
+</body>
+</html>

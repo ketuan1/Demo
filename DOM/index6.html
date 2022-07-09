@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CSS</title>
+</head>
+<body>
+    <h1>DOM CSS</h1>
+    <div class="box"></div>
+    <div class="box2"></div>
+
+    <script>
+        //css DOM
+        //case 1
+        var boxE = document.querySelector('.box');
+        boxE.style.width='100px';
+        boxE.style.height='100px';
+        boxE.style.backgroundColor='aqua';
+
+        //case 2 để css nhanh hơn
+
+        var boxE2 = document.querySelector('.box2');
+        Object.assign(boxE2.style, {
+            with: '40px',
+            height: '50px',
+            backgroundColor: 'yellow',
+        });
+     //   console.log(boxE2.style.width);
+    </script>
+</body>
+</html>

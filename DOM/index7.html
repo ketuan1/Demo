@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList</title>
+</head>
+<style>
+    .red {
+        color: red;
+    }
+</style>
+<body>
+    <h1>Property ClassList</h1>
+    <div class="box box-1">
+        <h1>classList</h1>
+        <h2 class="hea">class</h2>
+    </div>
+
+
+    <script>
+        //classList => lấy ra danh sách class
+        var boxE = document.querySelector('.box');
+      
+        //thêm classList
+       // boxE.classList.add('red', 'blue');
+
+        //kiểm tra element có tồn tại k
+       // console.log(boxE.classList.contains('red'));
+
+       //xóa class
+     //  boxE.classList.remove('red');
+     
+     //toggle => nếu có thì gở bỏ class còn chưa có thì thêm class vào
+   //  boxE.classList.toggle('red');
+
+   setInterval(()=> {
+      
+       boxE.classList.toggle('red');
+   }, 1000);
+
+      //  console.log(boxE.classList.length);
+        // chấm lenght => lấy độ dài
+        //chấm [0] => mảng
+        //chấm value => lấy chuỗi
+    </script>
+</body>
+</html>

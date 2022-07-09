@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAScript6</title>
+</head>
+<body>
+    <h1>Spread</h1>
+
+
+    <script>
+        var array = ['Java', 'ruby', 'css'];
+        var array2 = ['html', 'js'];
+
+        //nối mảng
+        //còn đảo ngược lại thì thay đổi array
+        var array3 = [...array, ...array2];
+        console.log(array3);
+
+        //nối Object
+
+        var obj1 = {
+            name: 'js'
+        };
+        var obj2 = {
+           price: 1000
+        };
+        var obj3 = {
+            ...obj1,
+            ...obj2,
+        };
+        console.log(obj3);
+    </script>
+</body>
+</html>

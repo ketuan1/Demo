@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSPN FETCH</title>
+</head>
+<body>
+    <h1>FETCH</h1>
+
+    <!-- Lý thuyết:
+
+        Fetch là một API cho việc gửi và nhận request bằng js và giúp việc yêu cầu xử lý web dễ dàng hơn
+        
+     -->
+
+   <ul id="post-block"></ul>
+
+    <script>
+        var postApi = 'https://jsonplaceholder.typicode.com/posts';
+
+        //trả về josn bằng html
+        fetch(postApi)
+        .then(function(response){
+            //rturn về 1 json
+            return response.json();
+        })
+         .then(function(posts){
+             var htmls = posts.map(function(post){
+                return `<li>
+                <h2>${post.title}</h2>
+                <p>${post.body}</p>
+                </li>`;
+             });  
+             var html = htmls.join('');
+             document.getElementById('post-block').innerHTML = html;              
+        })
+        
+       .catch(function(err){
+           alert('có lỗi');
+       });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>Promise (concept)</h1>
+
+    <script>
+      //create promise
+      //promise có 3 trạng thái((resolve, reject, finally)
+
+      // 1: đang chờ
+      // 2: thành công
+      // 3: thất bại
+      var promise = new Promise(
+          //create 2 biến(resolve, reject) => tùy chọn
+          function(resolve, reject){
+
+            resolve();
+
+          }
+      );
+
+      promise
+      //trong các method này đều nhận 1 callback là funtion()
+
+      //khi resolve dc gọi thì then dc gọi
+      .then(function(){
+          console.log('success');
+      })
+
+      //khi reject dc gọi thì catch dc gọi
+      .catch(function(){
+          console.log('erro');
+      })
+
+      //khi 1 trong reject hoặc resolve dc gọi thì finally dc gọi
+      .finally(function(){
+          console.log('Done');
+      });
+
+
+      /*
+      Lý thuyết về promise:
+      + Promise nó là khái niệm sinh ra để sử lý về bất đồng bộ
+      +trước khi có promise thì ta sử dụng callback và sảy ra vấn đề là callback hell 
+      code rất khó nhìn , khó hiểu nên sinh ra promise để khắc phục callback hell để code dễ hơn
+      và dể hiểu hơn và dễ đọc
+      
+      +để tạo ra promise thì ta tạo Object và truyền vào 1 function => trong function nhận dc 
+      2 tham số dạng hàm (resolve(thành công) và reject(thất bại))
+
+      + then => nhận callback khi thực thi khi resolve
+      + cacth => nhận callback khi thực thi reject
+      */
+
+
+
+    </script>
+</body>
+</html>
